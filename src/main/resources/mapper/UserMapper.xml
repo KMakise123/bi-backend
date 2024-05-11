@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hjh.bibackend.model.domain.User">
+
+    <resultMap id="BaseResultMap" type="com.hjh.bibackend.model.domain.User">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="account" column="account" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="avatarUrl" column="avatar_Url" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="userRole" column="user_Role" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_Time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_Time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_Delete" jdbcType="TINYINT"/>
+            <result property="loginTime" column="login_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,account,password,
+        username,avatar_Url,phone,
+        email,status,user_Role,
+        create_Time,update_Time,is_Delete,
+        login_time
+    </sql>
+</mapper>
